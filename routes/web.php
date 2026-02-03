@@ -6,10 +6,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/aboutsss', function () {
+Route::get('/about', function () {
     return view('about');
 })->name('about-us');
 
 Route:: get('/post',function() {
-    return view('post');
+    return view('pages.post');
 });
+
+
+// Route::redirect('/about','/test');
