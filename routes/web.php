@@ -11,7 +11,11 @@ Route::get('/about', function () {
 })->name('about-us');
 
 Route:: get('/post',function() {
-    return view('pages.post');
+    return view('post');
+});
+
+Route:: get('/webpage',function() {
+    return view('webpage');
 });
 
 
