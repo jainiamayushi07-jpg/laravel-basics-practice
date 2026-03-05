@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Simple Website Layout</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>
+        Laravel Basics - @yield('title')
+    </title>
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    @stack('styles')
 </head>
 <body>
 
@@ -16,10 +19,8 @@
     <!-- Navigation Bar -->
     <nav class="navbar">
         <a href="/">Home</a>
-        <a href="#">About</a>
+        <a href="about">About</a>
         <a href="/post">Post</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
     </nav>
 
     <!-- Main Section -->
@@ -35,14 +36,18 @@
                 <li><a href="#">Logout</a></li>
             </ul>
         </aside>
-
+        <div>
+       @hasSection('content')<!--if content section exist in other pagess-->
        @yield('content')
+       @else <h2> No content Found</h2>
+       @endIf
+</div>                               
     </div>
 
     <!-- Footer -->
     <footer class="footer">
         <p>© 2026 My Website | Designed by You</p>
     </footer>
-
+    @stack('scripts')
 </body>
 </html>

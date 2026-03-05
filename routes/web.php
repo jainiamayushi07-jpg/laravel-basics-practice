@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\SingleActionController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -14,9 +17,13 @@ Route:: get('/post',function() {
     return view('post');
 });
 
-Route:: get('/webpage',function() {
-    return view('webpage');
+Route::get('/test',function(){
+    return view('test');
 });
+
+Route::get('/user', [UserController::class,'showUser']);
+Route::get('/user/{id}',[UserController::class,'showData'])->name('showdata');
+Route::get('/actioncontroller',SingleActionController::class);
 
 
 // Route::redirect('/about','/test');
