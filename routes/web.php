@@ -21,8 +21,8 @@ Route::get('/test',function(){
     return view('test');
 });
 
-Route::get('/user', [UserController::class,'showUser']);
-Route::get('/user/{id}',[UserController::class,'showData'])->name('showdata');
+Route::get('/user', [UserController::class,'showUser'])->name('data');
+Route::get('/user/{id}',[UserController::class,'showData']);
 Route::get('/actioncontroller',SingleActionController::class);
 
 
