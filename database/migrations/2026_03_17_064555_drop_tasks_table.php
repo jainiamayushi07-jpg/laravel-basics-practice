@@ -11,11 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('students', function (Blueprint $table) {
-             $table->string('address',45)->change();
-            $table->string('address',60)->change();
-            $table->integer('votes')->unsigned()->default(1)->change();
-        });
+      Schema::dropIfExists('tasks');
     }
 
     /**
@@ -23,8 +19,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('students', function (Blueprint $table) {
-            //
-        });
+        //
     }
 };

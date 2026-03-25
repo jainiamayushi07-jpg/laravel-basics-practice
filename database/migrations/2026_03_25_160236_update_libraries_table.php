@@ -11,13 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('students', function (Blueprint $table) {
-            $table->string('address',30);
-            $table->string('city',45);
-            $table->dropColumn('city');
-            $table->string('parents_name',12);
-            $table->string('parents_name',30)->change();
-           
+        Schema::table('libraries', function (Blueprint $table) {
+            $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade');
         });
     }
 
@@ -26,7 +21,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('students', function (Blueprint $table) {
+        Schema::table('libraries', function (Blueprint $table) {
             //
         });
     }
