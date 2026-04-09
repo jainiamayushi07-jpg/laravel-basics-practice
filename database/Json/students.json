@@ -1,0 +1,18 @@
+[
+    {
+    "created_at" :"2026-04-09 18:31:16",
+    "updated_at" :"2026-04-28 18:31:16",
+    "student_name" : "Ayushi",
+    "email" : "jain.ayushi93@yahoo.in",
+     "address" : "Ahemdabad",
+     "parents_name" : "Pushpa"
+},
+{
+     "created_at" :"2026-04-09 18:32:33",
+    "updated_at" :"2026-04-28 18:33:16",
+    "student_name" : "Ayush",
+    "email" : "jain.ayush93@yahoo.in",
+     "address" : "mumbai",
+     "parents_name" : "amrit"
+}
+]
