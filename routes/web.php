@@ -21,6 +21,17 @@ Route::get('/test',function(){
     return view('test');
 });
 
+Route::get('/users',function(){
+    $names=[
+        1=>['name'=>'Ayushi','phone'=>'9408552872'],
+        2=>['name'=>'Ami','phone'=>'7320991268']
+    ];
+    return view('users',['user1'=>$names]);
+
+
+});
+
+
 Route::get('/user', [UserController::class,'showUser'])->name('data');
 Route::get('/user/{id}',[UserController::class,'showData']);
 Route::get('/actioncontroller',SingleActionController::class);

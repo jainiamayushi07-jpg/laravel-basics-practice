@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string('address',60)->change();
             $table->integer('votes')->unsigned()->default(1)->change();
             $table->string('parents_name',50)->change();
+            
+            
         });
     }
 

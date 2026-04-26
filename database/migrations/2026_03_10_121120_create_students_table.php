@@ -19,6 +19,9 @@ return new class extends Migration
             $table->string('student_name');
             $table->string('email');
             $table->integer('votes');
+            $table->integer('age');
+            $table->string('password');
+            $table->string('phonenumber');
   
             
            
