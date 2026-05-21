@@ -12,6 +12,10 @@ class UserController extends Controller
         //return $students;
         return view ('StudentList',['studentlist'=>$students]);
     }
+    public function singleStudentDisplay(string $id){
+        $singlestudent=DB::table('students')->where('id',$id)->get();
+        return view('singlestudentdisplay',['singlestudent'=> $singlestudent]);
+    }
     public function showBlog(){
         return view('showblog');
     }

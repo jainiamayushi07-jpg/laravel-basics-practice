@@ -36,7 +36,6 @@ Route::get('/user', [UserController::class,'showUser'])->name('data');
 Route::get('/user/{id}',[UserController::class,'showData']);
 Route::get('/actioncontroller',SingleActionController::class);
 Route::get('/anchortag',[UserController::class,'showBlog'])->name('showblog');
-Route::get('/showstudentlist',[UserController::class,'git ']);
-
-
+Route::get('/showstudentlist',[UserController::class,'showStudentList']);
+Route::get('/showsinglestudentdisplay/{id}',[UserController::class,'singleStudentDisplay'])->name('view.singlestudentdisplay');
 // Route::redirect('/about','/test');

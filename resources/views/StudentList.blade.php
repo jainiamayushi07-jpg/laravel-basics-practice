@@ -32,7 +32,7 @@
                 <td>{{$details->age}}</td>
                 <td>{{$details->phonenumber}}</td>
                  <td>{{$details->address}}</td>
-                 <td><a href="{{route('showblog')}}"><button type="button" class="btn btn-primary">View</button></a>
+                 <td><a href="{{route('view.singlestudentdisplay',$details->id)}}"><button type="button" class="btn btn-primary">View</button></a>
                 <td><a href="{{route('showblog')}}"><button type="button" class="btn btn-primary">Update</button></a>
                 <td><a href="{{route('showblog')}}"><button type="button" class="btn btn-primary">Delete</button></a>
                 
